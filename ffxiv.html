@@ -1,0 +1,427 @@
+<body style="background-color:black;">
+
+  <!-- The Modal -->
+  <div id="myModal" class="modal">
+    <div id="modalBorder">
+      <div class="modalContent">
+        <p>Please enter the Lodestone ID or URL of your character</p>
+        <input type="text" id="fname" name="fname"><br>
+        <button id="modalButton">Submit</button>
+      </div>
+    </div>
+    <!-- Modal content -->
+
+
+  </div>
+
+  <class id="sidePanel"><br>
+    <div class="title" id="titleTop"></div>
+    <div class="sidePanelContent" id="charName"></div>
+    <div class="title" id="titleBottom"></div>
+    <div class="title" id="server"></div> <br>
+    <div class="portraitContainer">
+
+      <img class="portrait" id="portrait" src=> <br> <br>
+    </div>
+    <div class="sidePanelContent" id="raceInfo"></div> <br>
+    <div class="iconDiv">
+      <img id="nd" src="https://i.ibb.co/PQxyR1N/nameday.png" width="27" height="27">
+      <div class="title" id="nameday"></div>
+      <span class="tooltiptext">Nameday</span>
+    </div>
+    <div class="iconDiv">
+      <div class="unicodeIcon">✧<div class="title" id="guardian"></div>
+      </div>
+      <span class="tooltiptext">Guardian</span>
+    </div> <br>
+    <div class="iconDiv" id="cityState">
+      <img id="cityStatePic" src="https://img.finalfantasyxiv.com/lds/h/j/Xlz3DzGOKmwiDGho5aGWaudRNI.png" width="27" height="27">
+      <div class="title" id="city"></div>
+      <span class="tooltiptext">City-State</span>
+    </div> <br>
+    <div class="iconDiv" id="grandCompany">
+      <img id="gcRankIcon" src="https://img.finalfantasyxiv.com/lds/h/V/tKlwWMAtNLAumnqjI8iNPnMKHc.png">
+      <div class="title" id="grandCompanyRank"></div>
+      <span class="tooltiptext">Grand Company Ranking</span>
+    </div> <br>
+    <div class="iconDiv" id="fcInfo">
+      <img class="freeCompanyBG" src="https://img2.finalfantasyxiv.com//c//B3b_9921a142051ac64d8232725018aa9537_f1_128x128.png" width="27" height="27">
+      <img class="freeCompanyFG" src="https://img2.finalfantasyxiv.com//c//F23_5154db99cdae3ec266835302ee7e08b7_00_128x128.png" width="27" height="27">
+      <img class="freeCompanyPic" src="https://img2.finalfantasyxiv.com//c//S60_e19dad51ef3864cefef5a4a51e6edf75_02_128x128.png" width="27" height="27">
+      <div class="title" id="freeCompanyName"></div>
+      <span class="tooltiptext">Free Company</span>
+    </div>
+  </class>
+
+
+  <div class id="section">
+    <Class id="sectionTitle">Disciples of War & Magic</Class>
+    <div class id="doWMJobs">
+      <table id="firstLevels" class="levelsTable">
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Paladin</div>
+              <figure class="photoContainer" id="paladinContainer"><img class="photo" id="paladinPhoto" src="https://img.finalfantasyxiv.com/lds/h/r/19gkbTUteNwgvhSVpuUWKi2Dao.png">
+              </figure>
+              <div class="classLevel" id="paladinLevel">--</div>
+            </figure>
+            <div id="paladinLevelBar" class="levelBar">
+            </div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">White Mage</div>
+              <figure class="photoContainer" id="whiteMageContainer"><img class="photo" id="whiteMagePhoto" src="https://img.finalfantasyxiv.com/lds/h/x/74gvmlz_BVBMbXC-llPmG4PTDI.png">
+              </figure>
+              <div class="classLevel" id="whiteMageLevel">--</div>
+            </figure>
+            <div id="whiteMageLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className" id="monkName">Monk</div>
+              <figure class="photoContainer" id="monkContainer"><img class="photo" id="monkPhoto" src="https://img.finalfantasyxiv.com/lds/h/o/ISY1a4OjSkpxt0U7Yz5mIdmFxU.png">
+              </figure>
+              <div class="classLevel" id="monkLevel">--</div>
+            </figure>
+            <div id="monkLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Bard</div>
+              <figure class="photoContainer" id="bardContainer"><img class="photo" id="bardPhoto" src="https://img.finalfantasyxiv.com/lds/h/k/z37cu-vMQhInpEzEbqsljUaiWk.png">
+              </figure>
+              <div class="classLevel" id="bardLevel">--</div>
+            </figure>
+            <div id="bardLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Black Mage</div>
+              <figure class="photoContainer" id="blackMageContainer"><img class="photo" id="blackMagePhoto" src="https://img.finalfantasyxiv.com/lds/h/F/_1zpdoy9pv6bRmkwDgsJDT4YeU.png">
+              </figure>
+              <div class="classLevel" id="blackMageLevel">--</div>
+            </figure>
+            <div id="blackMageLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Warrior</div>
+              <figure class="photoContainer" id="warriorContainer"><img class="photo" id="warriorPhoto" src="https://img.finalfantasyxiv.com/lds/h/X/KCKjIvNKDbLLBHsNsspGh3yBUA.png">
+              </figure>
+              <div class="classLevel" id="warriorLevel">--</div>
+            </figure>
+            <div id="warriorLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Scholar</div>
+              <figure class="photoContainer" id="scholarContainer"><img class="photo" id="scholarPhoto" src="https://img.finalfantasyxiv.com/lds/h/6/2_hOgb2Z3r6-flK3SK2durbNjk.png">
+              </figure>
+              <div class="classLevel" id="scholarLevel">--</div>
+            </figure>
+            <div id="scholarLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Dragoon</div>
+              <figure class="photoContainer" id="dragoonContainer"><img class="photo" id="dragoonPhoto" src="https://img.finalfantasyxiv.com/lds/h/L/H2xTb1YChci5CGloKUTT6UYwB8.png">
+              </figure>
+              <div class="classLevel" id="dragoonLevel">--</div>
+            </figure>
+            <div id="dragoonLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Machinist</div>
+              <figure class="photoContainer" id="machinistContainer"><img class="photo" id="machinistPhoto" src="https://img.finalfantasyxiv.com/lds/h/g/enK1U65D7T5Mho0Oyxg7iFssbg.png">
+              </figure>
+              <div class="classLevel" id="machinistLevel">--</div>
+            </figure>
+            <div id="machinistLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Summoner</div>
+              <figure class="photoContainer" id="summonerContainer"><img class="photo" id="summonerPhoto" src="https://img.finalfantasyxiv.com/lds/h/f/Egm9GVLT_YmVg1OCQfiZbampzg.png">
+              </figure>
+              <div class="classLevel" id="summonerLevel">--</div>
+            </figure>
+            <div id="summonerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Dark Knight</div>
+              <figure class="photoContainer" id="darkKnightContainer"><img class="photo" id="darkKnightPhoto" src="https://img.finalfantasyxiv.com/lds/h/1/gEnoZC5Sqm-5bbRgQe5GAIejHs.png">
+              </figure>
+              <div class="classLevel" id="darkKnightLevel">--</div>
+            </figure>
+            <div id="darkKnightLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Astrologian</div>
+              <figure class="photoContainer" id="astrologianContainer"><img class="photo" id="astrologianPhoto" src="https://img.finalfantasyxiv.com/lds/h/C/gth6MDHFf_PGjByWWjqs_7kGhk.png">
+              </figure>
+              <div class="classLevel" id="astrologianLevel">--</div>
+            </figure>
+            <div id="astrologianLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Ninja</div>
+              <figure class="photoContainer" id="ninjaContainer"><img class="photo" id="ninjaPhoto" src="https://img.finalfantasyxiv.com/lds/h/A/H12sAIEQZV95mmP-BC2V5zKfGQ.png">
+              </figure>
+              <div class="classLevel" id="ninjaLevel">--</div>
+            </figure>
+            <div id="ninjaLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Dancer</div>
+              <figure class="photoContainer" id="dancerContainer"><img class="photo" id="dancerPhoto" src="https://img.finalfantasyxiv.com/lds/h/a/oo4vaiGXqroY9ORa6_nSFz8ums.png">
+              </figure>
+              <div class="classLevel" id="dancerLevel">--</div>
+            </figure>
+            <div id="dancerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Red Mage</div>
+              <figure class="photoContainer" id="redMageContainer"><img class="photo" id="redMagePhoto" src="https://img.finalfantasyxiv.com/lds/h/2/ZbKRpKbGpYGbabUx3t-EhSNucg.png">
+              </figure>
+              <div class="classLevel" id="redMageLevel">--</div>
+            </figure>
+            <div id="redMageLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Gunbreaker</div>
+              <figure class="photoContainer" id="gunbreakerContainer"><img class="photo" id="gunbreakerPhoto" src="https://img.finalfantasyxiv.com/lds/h/r/wqtc-ehOC-UN5c5tsGT3z7Vmd8.png">
+              </figure>
+              <div class="classLevel" id="gunbreakerLevel">--</div>
+            </figure>
+            <div id="gunbreakerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Samurai</div>
+              <figure class="photoContainer" id="samuraiContainer"><img class="photo" id="samuraiPhoto" src="https://img.finalfantasyxiv.com/lds/h/P/Vjtspg0PssROIwyFtY0D2OMe7s.png">
+              </figure>
+              <div class="classLevel" id="samuraiLevel">--</div>
+            </figure>
+            <div id="samuraiLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Blue Mage</div>
+              <figure class="photoContainer" id="blueMageContainer"><img class="photo" id="blueMagePhoto" src="https://i.ibb.co/87ZhY6F/FFXIV-Blue-Mage-Sprite.png">
+              </figure>
+              <div class="classLevel" id="blueMageLevel">--</div>
+            </figure>
+            <div id="blueMageLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+      </table>
+    </div>
+    
+    <div class id="doHLJobs">
+      <table class="levelsTable">
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Carpenter</div>
+              <figure class="photoContainer" id="carpenterContainer"><img class="photo" id="carpenterPhoto" src="https://img.finalfantasyxiv.com/lds/h/o/AVCQmcuJmZYlPy-5imnTyXQdnw.png">
+              </figure>
+              <div class="classLevel" id="carpenterLevel">--</div>
+            </figure>
+            <div id="carpenterLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+             <figure class="classContainer">
+              <div class="className">Leatherworker</div>
+              <figure class="photoContainer" id="leatherworkerContainer"><img class="photo" id="leatherworkerPhoto" src="https://img.finalfantasyxiv.com/lds/h/a/D-RJnIWhXdiFVv1TD1ewI73SfA.png">
+              </figure>
+              <div class="classLevel" id="leatherworkerLevel">--</div>
+            </figure>
+            <div id="leatherworkerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack" ></div>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Miner</div>
+              <figure class="photoContainer" id="minerContainer"><img class="photo" id="minerPhoto" src="https://img.finalfantasyxiv.com/lds/h/p/gksIc0Rly6kXzkue0FrgGXcFBM.png">
+              </figure>
+              <div class="classLevel" id="minerLevel">--</div>
+            </figure>
+            <div id="minerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Blacksmith</div>
+              <figure class="photoContainer" id="blacksmithContainer"><img class="photo" id="blacksmithPhoto" src="https://img.finalfantasyxiv.com/lds/h/2/ZqxFEWz-BfqKjapmempdU9rPds.png">
+              </figure>
+              <div class="classLevel" id="blacksmithLevel">--</div>
+            </figure>
+            <div id="blacksmithLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Weaver</div>
+              <figure class="photoContainer" id="weaverContainer"><img class="photo" id="leatherworkerPhoto" src="https://img.finalfantasyxiv.com/lds/h/F/d9udmDWJBTolfTJuBULuIiussA.png">
+              </figure>
+              <div class="classLevel" id="weaverLevel">--</div>
+            </figure>
+            <div id="weaverLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td></td>
+          <td></td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Botanist</div>
+              <figure class="photoContainer" id="botanistContainer"><img class="photo" id="botanistPhoto" src="https://img.finalfantasyxiv.com/lds/h/W/YpKi02VkPk5it2EjXDuULS4Ipw.png">
+              </figure>
+              <div class="classLevel" id="botanistLevel">--</div>
+            </figure>
+            <div id="botanistLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+        </tr>
+
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Armorer</div>
+              <figure class="photoContainer" id="armorerContainer"><img class="photo" id="armorerPhoto" src="https://img.finalfantasyxiv.com/lds/h/A/heT1GDESSPF2M9pYy7zv4yTCFA.png">
+              </figure>
+              <div class="classLevel" id="armorerLevel">--</div>
+            </figure>
+            <div id="armorerLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Alchemist</div>
+              <figure class="photoContainer" id="alchemistContainer"> <img class="photo" id="alchemistPhoto" src="https://img.finalfantasyxiv.com/lds/h/A/heT1GDESSPF2M9pYy7zv4yTCFA.png">
+              </figure>
+              <div class="classLevel" id="alchemistLevel">--</div>
+            </figure>
+            <div id="alchemistLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className"></div>
+              <figure class="photoContainer"><img class="photo" src="">
+              </figure>
+            </figure>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className"></div>
+              <figure class="photoContainer"><img class="photo" src="">
+              </figure>
+            </figure>
+          </td>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Fisher</div>
+              <figure class="photoContainer" id="fisherContainer"><img class="photo" id="fisherPhoto" src="https://img.finalfantasyxiv.com/lds/h/F/ieu9QvGb-OGItCCddpKVH_kM9I.png">
+              </figure>
+              <div class="classLevel" id="fisherLevel">--</div>
+            </figure>
+            <div id="fisherLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"</div>
+          </td>
+        </tr>
+
+        <tr>
+          <td>
+            <figure class="classContainer">
+              <div class="className">Goldsmith</div>
+              <figure class="photoContainer" id="goldsmithContainer"><img class="photo" id="goldsmithPhoto" src="https://img.finalfantasyxiv.com/lds/h/S/RbiVmK2aQl1i47y5R67gHZO8rs.png">
+              </figure>
+              <div class="classLevel" id="goldsmithLevel">--</div>
+            </figure>
+            <div id="goldsmithLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+            <figure class="classContainer" id="nineteenthContainer">
+              <div class="className" id="nineteenthJob">Culinarian</div>
+              <figure class="photoContainer" id="culinarianContainer"><img class="photo" id="culinarianPhoto" src="https://img.finalfantasyxiv.com/lds/h/C/pmgKh1jPu1VTPB8q6lWmx8ywKg.png">
+              </figure>
+              <div class="classLevel" id="culinarianLevel">--</div>
+            </figure>
+            <div id="culinarianLevelBar" class="levelBar"></div>
+            <div class="levelBarBack"></div>
+          </td>
+          <td>
+          </td>
+          <td>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div id="navPanel"> <br>
+    <div class="navPanelContent" id="doWMNav">
+      Disciples of War & Magic
+    </div> <br>
+    <div class="navPanelContent" id="doHLNav">
+      Disciples of the Hand & Land
+    </div> <br>
+    <div class="navPanelContent" id="mountsNav">
+      Mounts
+    </div> <br>
+    <div class="navPanelContent" id="minionsNav">
+      Minions
+    </div>
+  </div>
+
+</body>
