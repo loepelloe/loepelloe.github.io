@@ -1,8 +1,16 @@
 /*
+	V. 1.0
+	@AUTHOR: LOGAN PELLETIER
+  @CREATION DATE: 3/14/2021
+*/
+
+/*
 	CREDITS
 	ALL SPRITES USED ARE PROPERTY OF SQUARE ENIX
   GIFS USED HAVE BEEN SOURCED FROM http://www.videogamesprites.net/FinalFantasy6/
+  MENU WAS INSPIRED BY: https://codepen.io/Kaizzo/pen/aGWwMM
 */
+
 
 /*
 	Constants containing information pertaining to FFXIV's in-game lore.
@@ -31,13 +39,6 @@ const classPromotions = {
   "Marauder": "Warrior",
   "Lancer": "Dragoon",
   "Rogue": "Ninja"
-};
-
-const pageTitles = {
-	doWMJobs: "Disciples of War & Magic",
-  doHLJobs: "Disciples of the Hand & Land",
-  mountTable: "Mounts",
-  minionTable: "Minions"
 };
 
 /*
@@ -97,7 +98,6 @@ var minionsNav = document.getElementById("minionsNav"),
 var modalButton = document.getElementById("modalButton");
 var modal = document.getElementById("myModal");
 var section = document.getElementById("section");
-var contentHolder = [doWMJobs, doHLJobs, minionTable, mountTable];
 
 /*
 	Initialization
@@ -316,7 +316,6 @@ function getFreeCompanyInfo(fcNum) {
       fcPortrait = fcInfo.FreeCompany.Crest;
       fcName = fcInfo.FreeCompany.Name;
       fcTag = fcInfo.FreeCompany.Tag;
-      console.log(fcTag)
     }
   });
   return fcName + "<br>" + fcTag;
@@ -491,7 +490,6 @@ function populateMimo (mimoArray) {
   var position = 0;
   var counterString, tableString;
   
-  // Creates the proper counters
   if (mimoArray == charInfo.Mounts) {
   	counterString = "mount";
     mimoStack = mounts;
@@ -499,7 +497,7 @@ function populateMimo (mimoArray) {
   	counterString = "minion";
     mimoStack = minions;
   }
-  
+  	
   // Sends to elements
   tableString = counterString += "Table";
   counterString += "Counter";
@@ -513,21 +511,19 @@ function populateMimo (mimoArray) {
     var tr = document.createElement('tr');
     table.appendChild(tr);
     for (var y = 0; y < 21; y++) {
-    	//if at the end, leave.
       mimo = mimoArray[position];
       if (mimo === undefined)
-        return;
+        break;
 
-			//Otherwise, increment to next position and update accordingly
+      //Otherwise, increment to next position and update accordingly
       position++;
       var td = document.createElement('td');
       var img = document.createElement('img');
-			var name = convertNameForHtml(mimo.Name);
-      var id = name.substr(1);
-      
-      // update elements accordingly
+
       img.setAttribute("class", "mimo");
+      var name = convertNameForHtml(mimo.Name);
       mimoStack.push(name);
+      var id = name.substr(1);
       img.setAttribute("id", id);
       img.setAttribute("src", mimo.Icon);
       img.style.display = "none";
@@ -537,11 +533,13 @@ function populateMimo (mimoArray) {
 
 
     }
-    //Adds newly created element to table
+     //Adds newly created element to table
     table.appendChild(tr);
   }
-
+  
+  var section = document.getElementById("section");
   var counterHolder = document.createElement("div");
+  
   
   // Creates counter holder (adds gifs) and updates the proper table
   if (mimoArray == charInfo.Mounts) {
@@ -556,17 +554,14 @@ function populateMimo (mimoArray) {
   mimoHolder.appendChild(counterHolder);
   
   // If mounts, then no need for excessive spacing
-  if (mimoArray == charInfo.Mounts)
- 		mimoHolder.appendChild(document.createElement("br"));
-  // If minions, then add extra spacing to account for smaller gifs. 
+  if (mimoArray == charInfo.Mounts) 
+		mimoHolder.appendChild(document.createElement("br"));
+  // If minions, then add extra spacing to account for smaller gifs.
   else
   	for (var x = 0; x < 5; x++)
     	mimoHolder.appendChild(document.createElement("br"));
-  
-  
   mimoHolder.appendChild(table)
   section.appendChild(mimoHolder);
-  mountTable = mimoHolder;
 }
 
 /*
@@ -684,7 +679,7 @@ function animateMimo(array, pointer) {
   var mimoElement = array[pointer]
   // If the element exists, 
   if (mimoElement != null) {
-  	//Show the element and expand it
+  //Show the element and expand it
     $(mimoElement).show(300, function() {
       $(mimoElement).animate({
         width: "50px",
@@ -713,7 +708,7 @@ function animateMimo(array, pointer) {
         else
           counterUnit += "!";
 
-        $(counter).text(pointer + counterUnit); 
+        $(counter).text(pointer + counterUnit);
         animateMimo(array, pointer);
       });
     })
@@ -721,11 +716,16 @@ function animateMimo(array, pointer) {
 }
 
 
+
 /*
 	This function will iterate through each minion in the table and animate all of them
 */
 function animateMinions() {
   $(document).ready(function() {
+    $("#sectionTitle").html("Minions");
+    $("#sectionTitle").css({
+      left: "585px"
+    });
     animateMimo(minions, minionStep);
 
     if (minionStep >= minions.length) {
@@ -739,13 +739,21 @@ function animateMinions() {
 */
 function animateMounts() {
   $(document).ready(function() {
-    
+    $("#sectionTitle").html("Mounts");
+    $("#sectionTitle").css({
+      left: "575px"
+    });
     animateMimo(mounts, mountStep);
 
     if (mountStep >= mounts.length)
       animateMimo(mounts, mountStep);
+
+
   });
 }
+
+
+
 
 /*
 	Button-Based Functions
@@ -755,10 +763,6 @@ function animateMounts() {
 doWMNav.onclick = function() {
   if (!$.contains(section, doWMJobs)) {
     document.getElementById("section").appendChild(doWMJobs);
-    $("#sectionTitle").html("Disciples of War & Magic");
-    $("#sectionTitle").css({
-      left: "485px"
-    });
   }
   doHLJobs.remove();
   minionTable.remove();
@@ -772,10 +776,6 @@ doWMNav.onclick = function() {
 doHLNav.onclick = function() {
   if (!$.contains(section, doHLJobs)) {
     document.getElementById("section").appendChild(doHLJobs);
-    $("#sectionTitle").html("Disciples of Hand & Land");
-    $("#sectionTitle").css({
-      left: "485px"
-    });
   }
   doWMJobs.remove();
   minionTable.remove();
@@ -789,10 +789,6 @@ doHLNav.onclick = function() {
 mountsNav.onclick = function() {
   if (!$.contains($("section"), mountTable)) {
     document.getElementById("section").appendChild(mountTable);
-    $("#sectionTitle").html("Mounts");
-    $("#sectionTitle").css({
-      left: "575px"
-    });
   }
 
 	doHLJobs.remove();
@@ -805,13 +801,8 @@ mountsNav.onclick = function() {
 
 //This function exists to update the displayed section when the Minions button is clicked
 minionsNav.onclick = function() {
-  if (!$.contains(section, minionTable)) {
+  if (!$.contains(section, minionTable))
     document.getElementById("section").appendChild(minionTable);
-    $("#sectionTitle").html("Minions");
-    $("#sectionTitle").css({
-      left: "585px"
-    });
-   }
 
   doWMJobs.remove();
   doHLJobs.remove();
@@ -821,7 +812,7 @@ minionsNav.onclick = function() {
   animateMinions();
 }
 
-
+// This function exists to send information from the modal to the form itself
 modalButton.onclick = function() {
   lodestoneID = document.getElementById("fname").value;
   getCharacterInfo();
